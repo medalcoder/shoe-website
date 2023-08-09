@@ -5,9 +5,18 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
+/*This sets the behaviour of the entire scroll of the page*/
 html{
     scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
 }
 
 section{
@@ -92,8 +101,8 @@ section .main .main_content .main_text h1{
 }
 section .main .main_content .main_text h1 span{
     font-size: 70px;
-    background-image: linear-gradient(to right, #c72092, #6c14d0);
-    -webkit-background-clip: content-box;
+    background: linear-gradient(to right,#c72092 , #6c14d0);
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
 }
@@ -136,5 +145,67 @@ section .main .button{
     left: 6%;
     padding: 10px 20px;
     border-radius: 30px;
-    background-image: linear-gradient(to right, #c72092, #6c14d0);
+    background: linear-gradient(to right,#c72092 , #6c14d0);
+}
+section .main .button a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+
+section .main .button i{
+    color: white;
+    margin-left: 5px;
+    transition: 0.3s;
+}
+
+section .main .button:hover i{
+    transform: translateX(6px);
+}
+
+/*Products Section*/
+.products{
+    width: 100%;
+    height: 140vh;
+    padding: 25px 0;
+}
+
+.products h1{
+    margin: 35px 0;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #c72092,#6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.products .box{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px 0;
+}
+
+.products .box .card{
+    width: 290px;
+    height: 440px;
+    box-shadow: 0 0 8px #6c14d0;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 20px;
+    background: #f6f6f6;
+}
+.products .box .card .image .img{
+    width: 150px;
+    height: 440px;
+    box-shadow: 0 0 8px #6c14d0;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 20px;
+    background: #f6f6f6;
 }
